@@ -6,7 +6,7 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 05:34:40 by mahmoud           #+#    #+#             */
-/*   Updated: 2023/07/04 13:35:16 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/07/09 18:28:37 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,46 +40,59 @@ void	free_string(char **str, size_t str_index)
 	free(str);
 }
 
-void	split_and_copy(const char *s, char c, char **str)
+char	*split_string(const char *s, char c, size_t *start)
 {
 	size_t	i;
 	size_t	j;
-	size_t	str_index;
+	char	*word;
+	size_t	k;
 
-	i = 0;
-	str_index = 0;
-	while (s[i] != '\0')
+	i = *start;
+	j = 0;
+	while (s[i] == c)
+		i++;
+	while (s[i + j] != '\0' && s[i + j] != c)
+		j++;
+	word = (char *)malloc(sizeof(char) * (j + 1));
+	if (word == NULL)
+		return (NULL);
+	k = 0;
+	while (k < j)
 	{
-		while (s[i] == c)
-			i++;
-		j = 0;
-		while (s[i + j] && s[i + j] != c)
-			j++;
-		if (j > 0)
-		{
-			str[str_index] = (char *)malloc(sizeof(char) * (j + 1));
-			if (str[str_index] == NULL)
-				return (free_string(str, str_index));
-			ft_strlcpy(str[str_index], &s[i], j + 1);
-			str_index++;
-		}
-		i += j;
+		word[k] = s[i + k];
+		k++;
 	}
-	str[str_index] = NULL;
+	word[j] = '\0';
+	*start = i + j;
+	return (word);
 }
 
 char	**ft_split(const char *s, char c)
 {
 	size_t	count;
 	char	**str;
+	size_t	start;
+	size_t	i;
 
+	start = 0;
 	if (s == NULL)
 		return (NULL);
 	count = get_num_words(s, c);
 	str = (char **)malloc(sizeof(char *) * (count + 1));
 	if (str == NULL)
 		return (NULL);
-	split_and_copy(s, c, str);
+	i = 0;
+	while (i < count)
+	{
+		str[i] = split_string(s, c, &start);
+		if (str[i] == NULL)
+		{
+			free_string(str, i);
+			return (NULL);
+		}
+		i++;
+	}
+	str[count] = NULL;
 	return (str);
 }
 
@@ -91,7 +104,7 @@ char	**ft_split(const char *s, char c)
 // 	unsigned int	count;
 // 	unsigned int	i;
 
-// 	s = "0 0 0 0 0 0 0";
+// 	s = "hello";
 // 	c = ' ';
 // 	count = get_num_words(s, c);
 // 	i = 0;
