@@ -16,7 +16,7 @@
 #include "libft.h"
 #include <limits.h>
 
-int	ft_atoi(const char *str)df
+int	ft_atoi(const char *str)
 {
 	int		sign;
 	int		result;
