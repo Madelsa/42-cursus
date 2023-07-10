@@ -6,7 +6,7 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 14:52:08 by mabdelsa          #+#    #+#             */
-/*   Updated: 2023/07/09 10:00:00 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/07/10 15:24:54 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *node;
+	t_list	*node;
 
 	if (lst == NULL || new == NULL)
 		return ;
@@ -28,5 +28,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	while (node->next != NULL)
 		node = node->next;
 	node->next = new;
-    new->next = NULL;
+	new->next = NULL;
 }
