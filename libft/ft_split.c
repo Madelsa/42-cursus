@@ -6,13 +6,13 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 05:34:40 by mahmoud           #+#    #+#             */
-/*   Updated: 2023/07/10 08:55:16 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/07/13 13:18:12 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	get_num_words(char const *s, char c)
+static size_t	get_num_words(char const *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -33,14 +33,14 @@ size_t	get_num_words(char const *s, char c)
 	return (count);
 }
 
-void	free_string(char **str, size_t str_index)
+static void	free_string(char **str, size_t str_index)
 {
 	while (str_index > 0)
 		free(str[--str_index]);
 	free(str);
 }
 
-char	*split_string(const char *s, char c, size_t *start)
+static char	*split_string(const char *s, char c, size_t *start)
 {
 	size_t	i;
 	size_t	j;

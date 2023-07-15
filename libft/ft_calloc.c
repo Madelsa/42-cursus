@@ -6,12 +6,13 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 11:54:01 by mabdelsa          #+#    #+#             */
-/*   Updated: 2023/07/05 16:07:58 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/07/14 16:34:20 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <limits.h>
+#include <stdio.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -29,14 +30,17 @@ void	*ft_calloc(size_t count, size_t size)
 	return (ptr);
 }
 
-// int	main(void)
+// int main(void)
 // {
-// 	/* 3 */ calloc(SIZE_MAX, SIZE_MAX);
-
-// 	/* @evportel */
-// 	/* The following tests are not supported by the function's documentation.
-//  	* But some effects returned in the trait by Moulinette so the following
-//   	* tests were implemented. */
-// 	/* 4 */ calloc(INT_MAX, INT_MAX);
-// 	/* 5 */ calloc(INT_MIN, INT_MIN);
+// 	char *ptr;
+// 	size_t i;
+// 	size_t j;
+// 	size_t k;
+	
+// 	i = 429496729522321321;
+// 	j = 4294967292253213213;
+// 	k = i * j;
+// 	// ptr = ft_calloc(UINT_MAX, UINT_MAX);
+// 	printf("%ld\n", k);
+// 	printf("%u\n", UINT_MAX * UINT_MAX);
 // }

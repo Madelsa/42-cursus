@@ -6,14 +6,13 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 21:10:52 by mahmoud           #+#    #+#             */
-/*   Updated: 2023/07/05 16:35:02 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/07/13 13:14:53 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
-size_t	get_int_len(int n)
+static size_t	get_int_len(int n)
 {
 	size_t	len;
 
@@ -28,7 +27,7 @@ size_t	get_int_len(int n)
 	return (len);
 }
 
-void	convert_int_to_str(char *str, unsigned int n_casted, size_t len,
+static void	convert_int_to_str(char *str, unsigned int n_casted, size_t len,
 		int is_negative)
 {
 	str[len + is_negative] = '\0';

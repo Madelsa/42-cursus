@@ -6,7 +6,7 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 14:26:20 by mabdelsa          #+#    #+#             */
-/*   Updated: 2023/07/10 10:04:53 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/07/13 16:21:30 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	ft_lstsize(t_list *lst)
 // 	printf("%d", size);
 // 	// while (current != NULL)
 // 	// {
-// 	// 	printf("content: %s\n",current->content);
+// 	// 	printf("content: %s\n", current->content);
 // 	// 	current = current->next;
 // 	// }
 // }

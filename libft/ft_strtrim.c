@@ -6,13 +6,13 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 12:23:55 by mahmoud           #+#    #+#             */
-/*   Updated: 2023/07/05 16:23:39 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/07/13 13:20:26 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*create_empty_string(void)
+static char	*create_empty_string(void)
 {
 	char	*str;
 
