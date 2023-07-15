@@ -6,7 +6,7 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 12:39:14 by mabdelsa          #+#    #+#             */
-/*   Updated: 2023/07/13 15:12:30 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/07/15 14:54:00 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (current != NULL)
 	{
 		function_applied = f(current->content);
-		if (function_applied == NULL)
+		if (f(current->content) == NULL)
 			return (clear_list(node, del));
 		new_node = ft_lstnew(function_applied);
 		if (new_node == NULL)

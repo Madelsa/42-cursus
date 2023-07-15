@@ -6,13 +6,11 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 11:54:01 by mabdelsa          #+#    #+#             */
-/*   Updated: 2023/07/14 16:34:20 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/07/15 14:47:50 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
-#include <stdio.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {

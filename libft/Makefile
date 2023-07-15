@@ -10,27 +10,24 @@ SRC_B = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c
       ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 OBJS		= $(SRC:.c=.o)
-OBJS_B		= $(SRC_B:.c=.o)
+OBJS_B      = $(SRC_B:.c=.o)
 
-NAME	= libft.a
-AR		= ar rcs
+NAME	      = libft.a
+AR		= ar ru
 RM		= rm -f
 GCC		= cc
 CFLAGS	= -Wall -Wextra -Werror
 
-all: ${NAME}
+all: $(NAME)
 
 %.o: %.c
 	$(GCC) $(CFLAGS) -c $< -o $@
 
-# %.o: %.c
-# 	$(GCC) $(CFLAGS) -c $< -o $@
-
-${NAME}: $(OBJS)
+$(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-bonus: $(OBJS) $(OBJS_B)
-	$(AR) $(NAME) $(OBJS) $(OBJS_B)
+bonus: $(OBJS_B)
+	$(AR) $(NAME) $(OBJS_B)
 
 clean:
 	$(RM) $(OBJS) $(OBJS_B)
@@ -40,4 +37,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re so bonus
+.PHONY: all clean fclean re bonus
