@@ -13,7 +13,7 @@ OBJS		= $(SRC:.c=.o)
 OBJS_B      = $(SRC_B:.c=.o)
 
 NAME	      = libft.a
-AR		= ar ru
+AR		= ar rcs
 RM		= rm -f
 GCC		= cc
 CFLAGS	= -Wall -Wextra -Werror
@@ -26,8 +26,8 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-bonus: $(OBJS_B)
-	$(AR) $(NAME) $(OBJS_B)
+bonus: $(OBJS) $(OBJS_B)
+	$(AR) $(NAME) $(OBJS) $(OBJS_B)
 
 clean:
 	$(RM) $(OBJS) $(OBJS_B)

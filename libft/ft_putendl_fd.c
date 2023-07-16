@@ -6,7 +6,7 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 03:37:41 by mahmoud           #+#    #+#             */
-/*   Updated: 2023/07/04 13:40:59 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/07/16 17:00:58 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putendl_fd(char *s, int fd)
 	if (s != NULL)
 	{
 		while (*s != '\0')
-			write(fd, &*s++, 1);
+			write(fd, s++, 1);
 		write(fd, "\n", 1);
 	}
 }

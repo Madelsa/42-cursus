@@ -27,11 +27,3 @@ char	*ft_strchr(const char *str, int c)
 		return ((char *)str + i);
 	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	char *str = "Hello, this is a test";
-// 	char c = 'o';
-
-// 	printf("%s", ft_strchr(str, c));
-// }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mahmoud <mahmoud@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 02:07:17 by mahmoud           #+#    #+#             */
-/*   Updated: 2023/06/21 02:49:09 by mahmoud          ###   ########.fr       */
+/*   Updated: 2023/07/16 17:57:37 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,24 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
-// char	increment(unsigned int index, char c)
-// {
-// 	return (c + index);
-// }
-
-// int	main(void)
-// {
-// 	const char	*input;
-// 	char		*output;
-
-// 	input = "Hello, world!";
-// 	output = ft_strmapi(input, increment);
-// 	if (output != NULL)
-// 	{
-// 		printf("Input: %s\n", input);
-// 		printf("Output: %s\n", output);
-// 		free(output); // Don't forget to free the allocated memory
-// 	}
-// 	return (0);
-// }

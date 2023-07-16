@@ -39,11 +39,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[dest_len + i] = '\0';
 	return (dest_len + src_len);
 }
-
-// int	main(void)
-// {
-// 	char destination[10] = "Hello";
-// 	const char *source = ", world!";
-// 	printf("%ld\n", ft_strlcat(destination, source, 7));
-// 	printf("%s", destination);
-// }

@@ -37,10 +37,8 @@ static int	process_digits(const char *str, int sign)
 int	ft_atoi(const char *str)
 {
 	int		sign;
-	long	result;
 
 	sign = 1;
-	result = 0;
 	while (*str == ' ' || (*str >= 9 && *str <= 13))
 		str++;
 	if (*str == '-' || *str == '+')
@@ -53,11 +51,3 @@ int	ft_atoi(const char *str)
 		str++;
 	return (process_digits(str, sign));
 }
-
-// int	main(int ac, char *av[])
-// {
-// 	// char str[] = "922337203685477581308123031208";
-// 	(void)ac;
-// 	printf("ORIGINAL :%d\n", atoi(av[1]));
-// 	printf("MINE: %d\n", ft_atoi(av[1]));
-// }

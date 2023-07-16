@@ -6,7 +6,7 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 03:29:46 by mahmoud           #+#    #+#             */
-/*   Updated: 2023/07/04 13:40:26 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/07/16 17:06:58 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	ft_putstr_fd(char *s, int fd)
 	if (s != NULL)
 	{
 		while (*s != '\0')
-			write(fd, &*s++, 1);
+			write(fd, s++, 1);
 	}
 }

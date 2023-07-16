@@ -6,7 +6,7 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 12:23:55 by mahmoud           #+#    #+#             */
-/*   Updated: 2023/07/13 13:20:26 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/07/16 18:14:43 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (set == NULL)
 		return ((char *)s1);
 	j = ft_strlen(s1) - 1;
-	while (s1[i] != '\0' && ft_strchr(set, s1[i]))
+	while (s1[i] != '\0' && ft_strchr(set, s1[i]) != NULL)
 		i++;
 	if (s1[i] == '\0')
 		return (create_empty_string());
-	while (ft_strchr(set, s1[j]))
+	while (ft_strchr(set, s1[j]) != NULL)
 		j--;
 	str = (char *)malloc((j - i + 2) * sizeof(char));
 	if (str == NULL)

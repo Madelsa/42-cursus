@@ -6,7 +6,7 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 05:34:40 by mahmoud           #+#    #+#             */
-/*   Updated: 2023/07/13 13:18:12 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/07/16 17:08:51 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,30 +95,3 @@ char	**ft_split(const char *s, char c)
 	str[count] = NULL;
 	return (str);
 }
-
-// int	main(void)
-// {
-// 	char			*s;
-// 	char			c;
-// 	char			**strings;
-// 	unsigned int	count;
-// 	unsigned int	i;
-
-// 	s = "hello";
-// 	c = ' ';
-// 	count = get_num_words(s, c);
-// 	i = 0;
-// 	strings = ft_split(s, c);
-// 	while (i < count)
-// 	{
-// 		printf("%s\n", strings[i]);
-// 		i++;
-// 	}
-// 	i = 0;
-// 	while (i < count)
-// 	{
-// 		free(strings[i]);
-// 		i++;
-// 	}
-// 	free(strings);
-// }

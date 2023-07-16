@@ -1,0 +1,385 @@
+
+////////////////////////////////////////////
+//ft_atoi main
+//Enter the value you want when compiling ./a.out
+int	main(int ac, char *av[])
+{
+	(void)ac;
+	printf("ORIGINAL :%d\n", atoi(av[1]));
+	printf("MINE: %d\n", ft_atoi(av[1]));
+}
+
+
+
+////////////////////////////////////////////
+//ft_bzero main
+int	main(void)
+{
+	char ch[] = {'a', 'b', 'c', 'd'};
+	int num[] = {1, 2, 3, 4};
+	char str[] = "HELLO";
+	int j = 0;
+
+	bzero(ch, sizeof(char) * 2);
+	bzero(num, sizeof(int) * 2);
+	bzero(str, sizeof(char ) * 1);
+	j = 0;
+	while (j < 4)
+		printf("%c\n", ch[j++]);
+	printf("\n");
+	j = 0;
+	while (j < 4)
+		printf("%d\n", num[j++]);
+	printf("\n");
+	printf("%s\n", str);
+}
+
+
+
+////////////////////////////////////////////
+//ft_itoa main
+int main(void)
+{
+	printf("%s",ft_itoa(INT_MAX));
+	printf("%s",ft_itoa(INT_MIN));
+}
+
+
+
+////////////////////////////////////////////
+//ft_lstadd_back main
+int	main(void)
+{
+	t_list *node1;
+	t_list *node2;
+	t_list *node3;
+	t_list *another_node1;
+	t_list *another_node2;
+	t_list *another_node3;
+	t_list *current;
+	t_list *next;
+
+	node1 = ft_lstnew(ft_strdup("A"));
+	node2 = ft_lstnew(ft_strdup("B"));
+	node3 = ft_lstnew(ft_strdup("C"));
+	another_node1 = ft_lstnew(ft_strdup("D"));
+	another_node2 = ft_lstnew(ft_strdup("E"));
+	another_node3 = ft_lstnew(ft_strdup("F"));
+	
+	another_node1->next = another_node2;
+	another_node2->next = another_node3;
+	another_node3->next = NULL;
+	
+	ft_lstadd_back(&node1, node2); 
+	ft_lstadd_back(&node1, node3);
+	ft_lstadd_back(&node1, another_node1);
+	
+	current = node1;
+	printf("Output: ");
+	while (current != NULL)
+	{
+		printf("%s", (char *)current->content);
+		current = current->next;
+	}
+	printf("\n");
+
+	printf("Size before clearing: %d\n", ft_lstsize(node1));
+	ft_lstclear(&node1,  free);
+	printf("Size after clearing: %d\n", ft_lstsize(node1));
+	printf("%s", (char *)node1->content);
+}
+
+
+
+////////////////////////////////////////////
+//ft_lstadd_front
+int	main(void)
+{
+	t_list *node1;
+	t_list *node2;
+	t_list *node3;
+	t_list *another_node1;
+	t_list *another_node2;
+	t_list *another_node3;
+	t_list *current;
+	t_list *next;
+
+	node1 = ft_lstnew(ft_strdup("A"));
+	node2 = ft_lstnew(ft_strdup("B"));
+	node3 = ft_lstnew(ft_strdup("C"));
+	another_node1 = ft_lstnew(ft_strdup("D"));
+	another_node2 = ft_lstnew(ft_strdup("E"));
+	another_node3 = ft_lstnew(ft_strdup("F"));
+	
+	another_node3->next = another_node2;
+	another_node2->next = another_node1;
+	another_node1->next = NULL;
+	
+	ft_lstadd_front(&node1, node2); 
+	ft_lstadd_front(&node1, node3);
+	ft_lstadd_front(&node1, another_node1);
+	
+	current = another_node3;
+	printf("Output: ");
+	while (current != NULL)
+	{
+		printf("%s", (char *)current->content);
+		current = current->next;
+	}
+	printf("\n");
+
+	printf("Size before clearing: %d\n", ft_lstsize(another_node3));
+	ft_lstclear(&another_node3, free);
+	printf("Size after clearing: %d\n", ft_lstsize(another_node3));
+	printf("%s", (char *)node1->content);
+}
+
+
+
+////////////////////////////////////////////
+//ft_lstclear main
+
+void	del(void *data)
+{
+	free(data);
+}
+
+int	main(void)
+{
+	t_list	*node1;
+	t_list	*node2;
+	t_list	*node3;
+	t_list	*node4;
+	char	a;
+
+	a = 'a';
+	node1 = ft_lstnew(ft_strdup(&a));
+	node2 = ft_lstnew(ft_strdup("B"));
+	node3 = ft_lstnew(ft_strdup("C"));
+	node4 = ft_lstnew(ft_strdup("D"));
+	node1->next = node2;
+	node2->next = node3;
+	node3->next = node4;
+	node4->next = NULL;
+	printf("Output: %c", *(char *)node1->content);
+	printf("%c", *(char *)node2->content);
+	printf("%c", *(char *)node3->content);
+	printf("%c\n", *(char *)node4->content);
+	printf("Size after clear: %d\n", ft_lstsize(node1));
+	ft_lstclear(&node1, del);
+	printf("Size after clear: %d\n", ft_lstsize(node1));
+}
+
+
+
+////////////////////////////////////////////
+//ft_lstdelone main
+void	del(void *data)
+{
+	free(data);
+}
+
+int	main(void)
+{
+	t_list *node1;
+	t_list *node2;
+	t_list *node3;
+	t_list *node4;
+	t_list *current;
+	t_list *next;
+
+	node1 = ft_lstnew(ft_strdup("A"));
+	node2 = ft_lstnew(ft_strdup("B"));
+	node3 = ft_lstnew(ft_strdup("C"));
+	node4 = ft_lstnew(ft_strdup("D"));
+	node1->next = node2;
+	node2->next = node3;
+	node3->next = node4;
+	node4->next = NULL;
+	current = node1;
+	printf("%s\n", (char *)node4->content);
+	ft_lstdelone(node4, del);
+	node3->next = NULL;
+	printf("%s\n", (char *)node4->content);
+}
+
+
+
+////////////////////////////////////////////
+//ft_lstiter main
+void	f(void *content)
+{
+	int	*c;
+
+	if (content == NULL)
+		return ;
+	c = (int *)content;
+	*c += 1;
+}
+
+int	main(void)
+{
+	t_list	*node1;
+	t_list	*node2;
+	t_list	*node3;
+	t_list	*current;
+	t_list	*func;
+	int i, j, k;
+	
+	i = 1;
+	j = 2;
+	k = 3;
+	node1 = ft_lstnew(&i);
+	node2 = ft_lstnew(&j);
+	node3 = ft_lstnew(&k);
+	
+	node1->next = node2;
+	node2->next = node3;
+	node3->next = NULL;
+	
+	current = node1;
+	while (current != NULL)
+	{
+		printf("Before: %d\t", *(int *)current->content);
+		current = current->next;
+	}
+	
+	current = node1;
+	ft_lstiter(current, f);
+	while (current != NULL)
+	{
+		printf("After: %d\t", *(int *)current->content);
+		current = current->next;
+	}
+}
+
+
+
+////////////////////////////////////////////
+//ft_lstlast main
+int	main(void)
+{
+	t_list	*node1;
+	t_list	*node2;
+	t_list	*node3;
+
+	node1 = ft_lstnew(ft_strdup("A"));
+	node2 = ft_lstnew(ft_strdup("B"));
+	node3 = ft_lstnew(ft_strdup("C"));
+	node1->next = node2;
+	node2->next = node3;
+	node3->next = NULL;
+	printf("%p\n", ft_lstlast(node1));
+	printf("%p\n", node3);
+}
+
+
+
+////////////////////////////////////////////
+//ft_lstmap main
+void	*f(void *content)
+{
+	int	*c;
+	
+	c = (int *)content;
+	*c = *c + 1;
+	return (c);
+}
+
+void	del(void *data)
+{
+	free(data);
+}
+
+int	main(void)
+{
+	t_list *node1;
+	t_list *node2;
+	t_list *node3;
+	t_list *current;
+	t_list *result;
+
+	int i, j, k;
+	i = 1;
+	j = 2;
+	k = 3;
+	node1 = ft_lstnew(&i);
+	node2 = ft_lstnew(&j);
+	node3 = ft_lstnew(&k);
+	current = node1;
+	node1->next = node2;
+	node2->next = node3;
+	node3->next = NULL;
+	while (current != NULL)
+	{
+		printf("Before: %d\t", *(int *)current->content);
+		current = current->next;
+	}
+	result = ft_lstmap(node1, f, del);
+	current = result;
+	while (current != NULL)
+	{
+		printf("After: %d\t", *(int *)current->content);
+		current = current->next;
+	}
+}
+
+
+
+////////////////////////////////////////////
+//ft_lstnew main
+int	main(void)
+{
+	t_list	*node1;
+	t_list	*node2;
+	t_list	*node3;
+	t_list	*current;
+	t_list	*next;
+
+	node1 = ft_lstnew(NULL);
+	node2 = ft_lstnew("H");
+	node3 = ft_lstnew("A");
+	node1->next = node2;
+	node2->next = node3;
+	current = node1;
+	while (current != NULL)
+	{
+		printf("current: %s\n", (char *)current->content);
+		current = current->next;
+	}
+	current = node1;
+	while (current != NULL)
+	{
+        next = current->next;
+        free(current);
+        current = next;
+	}
+}
+
+
+
+////////////////////////////////////////////
+//ft_lstsize main
+int	main(void)
+{
+	t_list	*node1;
+	t_list	*node2;
+	t_list	*node3;
+	t_list	*node4;
+	t_list	*current;
+	int		size;
+
+	node1 = ft_lstnew("A");
+	node2 = ft_lstnew("B");
+	node3 = ft_lstnew("C");
+	node4 = ft_lstnew("D");
+	current = node1;
+	node1->next = node2;
+	node2->next = node3;
+	node3->next = node4;
+	size = ft_lstsize(current);
+	printf("%d", size);
+}
+
+
+
