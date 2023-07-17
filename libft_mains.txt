@@ -1,7 +1,8 @@
 
 ////////////////////////////////////////////
 //ft_atoi main
-//Enter the value you want when compiling ./a.out
+//Enter the value you want after compiling
+//Example: ./a.out 973527
 int	main(int ac, char *av[])
 {
 	(void)ac;
