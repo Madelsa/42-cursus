@@ -14,20 +14,9 @@
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	size_t	i;
-
-	if (str1 == NULL || str2 == NULL || n <= 0)
-		return (0);
-	i = 0;
-	while (i < n - 1
-		&& ((unsigned char *)str1)[i] == ((unsigned char *)str2)[i])
-		i++;
-	return (((unsigned char *)str1)[i] - ((unsigned char *)str2)[i]);
-}
-
-int main(void)
-{
-	char s2[] = "31312312";
-	char s1[] = "31312312";
-	printf("%d", ft_memcmp(NULL, s2, 4));
+	while (n && *(unsigned char *)str1++ == *(unsigned char *)str2++)
+		n--;
+	if (n > 0)
+		return (*((unsigned char *)str1 - 1) - *((unsigned char *)str2 - 1));
+	return (0);
 }

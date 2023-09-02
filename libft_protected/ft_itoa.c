@@ -6,7 +6,7 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 21:10:52 by mahmoud           #+#    #+#             */
-/*   Updated: 2023/07/16 12:16:18 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/09/02 15:11:34 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,42 +27,31 @@ static size_t	get_int_len(int n)
 	return (len);
 }
 
-static void	convert_int_to_str(char *str, unsigned int n, size_t len,
-		int is_negative)
-{
-	str[len + is_negative] = '\0';
-	while (len > 0)
-	{
-		str[len - 1 + is_negative] = (n % 10) + '0';
-		n /= 10;
-		len--;
-	}
-	if (is_negative)
-		str[0] = '-';
-}
-
 char	*ft_itoa(int n)
 {
-	char			*str;
-	size_t			len;
-	int				is_negative;
+	char	*str;
+	size_t	len;
+	char	*start;
+	long	n_casted;
 
-	is_negative = 0;
-	if (n < 0)
+	n_casted = n;
+	len = get_int_len(n_casted);
+	if (n_casted < 0)
 	{
-		is_negative = 1;
-		n *= -1;
+		len++;
+		n_casted = -n_casted;
 	}
-	len = get_int_len(n);
-	str = (char *)malloc(sizeof(char) * (len + 1 + is_negative));
+	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (NULL);
-	if (n == 0)
+	start = str + len;
+	*start = '\0';
+	while (len--)
 	{
-		str[0] = '0';
-		str[1] = '\0';
-		return (str);
+		*--start = (n_casted % 10) + '0';
+		n_casted /= 10;
 	}
-	convert_int_to_str(str, n, len, is_negative);
-	return (str);
+	if (n < 0)
+		*(str + 0) = '-';
+	return (start);
 }
