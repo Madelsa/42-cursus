@@ -38,7 +38,7 @@ int	ft_atoi(const char *str)
 {
 	int		sign;
 
-	if (str == NULL)
+	if (!str)
 		return (0);
 	sign = 1;
 	while (*str == ' ' || (*str >= 9 && *str <= 13))

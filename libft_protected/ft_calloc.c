@@ -6,7 +6,7 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 11:54:01 by mabdelsa          #+#    #+#             */
-/*   Updated: 2023/09/02 11:40:41 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/09/05 15:18:58 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	total_size = count * size;
 	ptr = (unsigned char *)malloc(total_size);
-	if (ptr == NULL)
+	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, total_size);
 	return (ptr);

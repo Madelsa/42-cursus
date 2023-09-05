@@ -6,7 +6,7 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 03:41:25 by mahmoud           #+#    #+#             */
-/*   Updated: 2023/07/16 18:27:59 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/09/03 08:21:26 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n_cast < 0)
 	{
 		ft_putchar_fd('-', fd);
-		n_cast *= -1;
+		n_cast = -n_cast;
 	}
 	if (n_cast > 9)
 		ft_putnbr_fd(n_cast / 10, fd);
