@@ -6,17 +6,15 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 16:05:47 by a0ec6397          #+#    #+#             */
-/*   Updated: 2023/07/14 16:02:10 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/09/09 16:04:33 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <limits.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
-# include <unistd.h>
+
+# include "./ft_printf/ft_printf.h"
+# include "./get_next_line/get_next_line.h"
 
 typedef struct s_list
 {

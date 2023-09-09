@@ -6,7 +6,7 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 05:34:40 by mahmoud           #+#    #+#             */
-/*   Updated: 2023/07/16 17:08:51 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/09/09 15:32:13 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ static size_t	get_num_words(char const *s, char c)
 
 	count = 0;
 	i = 0;
-	while (s[i] != '\0')
+	while (s[i])
 	{
 		while (s[i] == c)
 			i++;
-		if (s[i] != '\0')
+		if (s[i])
 		{
 			count++;
-			while (s[i] != c && s[i] != '\0')
+			while (s[i] != c && s[i])
 				i++;
 		}
 	}
@@ -51,7 +51,7 @@ static char	*split_string(const char *s, char c, size_t *start)
 	j = 0;
 	while (s[i] == c)
 		i++;
-	while (s[i + j] != '\0' && s[i + j] != c)
+	while (s[i + j] && s[i + j] != c)
 		j++;
 	word = (char *)malloc(sizeof(char) * (j + 1));
 	if (word == NULL)

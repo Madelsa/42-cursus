@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   print_char_string.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/07 01:44:21 by mahmoud           #+#    #+#             */
-/*   Updated: 2023/09/05 15:21:01 by mabdelsa         ###   ########.fr       */
+/*   Created: 2023/07/31 16:53:16 by mabdelsa          #+#    #+#             */
+/*   Updated: 2023/08/05 13:49:50 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+unsigned int	ft_put_char(int c)
 {
-	t_list	*node;
-	t_list	*next;
+	write(1, &c, 1);
+	return (1);
+}
 
-	if (!lst || !*lst || !del)
-		return ;
-	node = *lst;
-	while (node)
+unsigned int	ft_put_string(char *str)
+{
+	unsigned int	count;
+
+	if (str == NULL)
 	{
-		next = node->next;
-		del(node->content);
-		free(node);
-		node = next;
+		write(1, "(null)", 6);
+		return (6);
 	}
-	*lst = NULL;
+	count = 0;
+	while (*str)
+	{
+		write(1, str++, 1);
+		count++;
+	}
+	return (count);
 }

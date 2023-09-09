@@ -14,6 +14,8 @@
 
 void	ft_bzero(void *str, size_t len)
 {
+	if (!str)
+		return ;
 	while (len--)
 		*(unsigned char *)str++ = 0;
 }

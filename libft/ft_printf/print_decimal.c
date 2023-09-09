@@ -1,28 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   print_decimal.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/21 03:41:25 by mahmoud           #+#    #+#             */
-/*   Updated: 2023/09/03 08:21:26 by mabdelsa         ###   ########.fr       */
+/*   Created: 2023/07/31 17:08:50 by mabdelsa          #+#    #+#             */
+/*   Updated: 2023/08/05 13:50:02 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_putnbr_fd(int n, int fd)
+unsigned int	ft_putnbr(int n)
 {
-	long	n_cast;
+	long			n_cast;
+	unsigned int	count;
 
+	count = 0;
 	n_cast = (long)n;
 	if (n_cast < 0)
 	{
-		ft_putchar_fd('-', fd);
-		n_cast = -n_cast;
+		ft_put_char('-');
+		n_cast *= -1;
+		count++;
 	}
 	if (n_cast > 9)
-		ft_putnbr_fd(n_cast / 10, fd);
-	ft_putchar_fd((n_cast % 10) + '0', fd);
+		count += ft_putnbr(n_cast / 10);
+	ft_put_char((n_cast % 10) + '0');
+	count++;
+	return (count);
+}
+
+unsigned int	ft_putnbr_unsigned(unsigned int n)
+{
+	unsigned int	count;
+
+	count = 0;
+	if (n > 9)
+		count += ft_putnbr(n / 10);
+	ft_put_char((n % 10) + '0');
+	count++;
+	return (count);
 }
