@@ -6,13 +6,41 @@
 /*   By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 14:50:13 by mabdelsa          #+#    #+#             */
-/*   Updated: 2023/09/09 15:13:59 by mabdelsa         ###   ########.fr       */
+/*   Updated: 2023/09/10 13:40:47 by mabdelsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
-char	*read_buffer(int fd, char *stored)
+static char	*ft_strjoin_gnl(char const *s1, char const *s2)
+{
+	char	*str;
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
+	if (s1 == NULL)
+		return (ft_strdup(s2));
+	else if (s2 == NULL)
+		return (ft_strdup(s1));
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (str == NULL)
+		return (NULL);
+	while (s1[j] != '\0')
+		str[i++] = s1[j++];
+	j = 0;
+	while (s2[j] != '\0')
+		str[i++] = s2[j++];
+	str[i] = '\0';
+	if (s1)
+		free((char *)s1);
+	return (str);
+}
+
+static char	*read_buffer(int fd, char *stored)
 {
 	char	*buff;
 	int		chars_read;
@@ -28,12 +56,12 @@ char	*read_buffer(int fd, char *stored)
 					|| stored[0] == '\0')))
 			return (free(buff), free(stored), NULL);
 		buff[chars_read] = '\0';
-		stored = ft_strjoin(stored, buff);
+		stored = ft_strjoin_gnl(stored, buff);
 	}
 	return (free(buff), stored);
 }
 
-char	*filter_stored(char *stored)
+static char	*filter_stored(char *stored)
 {
 	int		i;
 	char	*str;
@@ -48,7 +76,7 @@ char	*filter_stored(char *stored)
 	return (str);
 }
 
-char	*update_stored(char *stored)
+static char	*update_stored(char *stored)
 {
 	int		i;
 	char	*str;
@@ -80,31 +108,3 @@ char	*get_next_line(int fd)
 	stored[fd] = update_stored(stored[fd]);
 	return (line);
 }
-
-// int	main(void)
-// {
-// 	int		fd;
-// 	int		fd1;
-// 	int		fd2;
-// 	char	*line;
-
-// 	fd = open("file.txt", O_RDONLY);
-// 	fd1 = open("file1.txt", O_RDONLY);
-// 	fd2 = open("file2.txt", O_RDONLY);
-// 	line = get_next_line(fd);
-// 	while (line)
-// 	{
-// 		printf("FD: %d, LINE: %s\n", fd, line);
-// 		free(line);
-//         line = get_next_line(fd1);
-//         printf("FD: %d, LINE: %s\n", fd1, line);
-// 		free(line);
-//         line = get_next_line(fd2);
-//          printf("FD: %d, LINE: %s\n", fd2, line);
-// 		free(line);
-// 		line = get_next_line(fd);
-// 	}
-// 	close(fd);
-// 	close(fd1);
-// 	close(fd2);
-// }
