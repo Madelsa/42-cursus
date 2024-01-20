@@ -210,7 +210,7 @@ Parameters:
   
 ### Character Classification
 
--ft_isalnum
+- ft_isalnum
 <pre>Description: Checks if the given character is alphanumeric.
 Parameters:
 - int x: The character to check.
