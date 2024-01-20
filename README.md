@@ -13,18 +13,16 @@
   - [String Conversion](#string-conversion)
   - [Char Conversion](#char-conversion)
   - [Linked Lists](#linked-lists)
-  - [Printing](#Printing)
-  - [Additional Functions (upcoming projects)](#additional-functions)
+  - [Printing](#printing)
+  - [Additional Functions (upcoming projects)](#additional-functions-upcoming-projects)
 
-<a name="Introduction"></a>
+
 ## Introduction
 
 Libft is a custom C library developed as part of the 42 curriculum. It contains a collection of functions that are commonly used in C programming, providing an essential set of tools for future projects. The library is designed to be robust, efficient, and to follow the 42 coding standards.
 
-<a name="Getting Started"></a>
 ## Getting Started
 
-<a name="Prerequisites"></a>
 ### Prerequisites
 
 To use the Libft library, you need:
@@ -32,7 +30,6 @@ To use the Libft library, you need:
     1) A C compiler (e.g., GCC)
     2) Make
 
-<a name="Installation"></a>
 ### Installation
 
 1) Clone the repository:
@@ -51,7 +48,6 @@ make
 ```
 This will generate the '<b>libft.a</b>' library file.
 
-<a name="Usage"></a>
 ### Usage
 
 To use the library in your C project, include the '<b>libft.h</b>' header file and link against the '<b>libft.a</b>' library as shown below:
@@ -176,7 +172,6 @@ Parameters:
 - void (*f)(unsigned int, char *): The function to apply.
 </pre>
 
-<a name="Memory Management"></a>
 ### Memory Management
 
 - ft_bzero
@@ -233,7 +228,6 @@ Parameters:
 - size_t len: Number of bytes to set.
 </pre>
 
-<a name="Character Classification"></a>
 ### Character Classification
 
 - ft_isalnum
@@ -266,7 +260,6 @@ Parameters:
 - int x: The character to check.
 </pre>
 
-<a name="String Conversion"></a>
 ### String Conversion
 
 - ft_atoi
@@ -281,7 +274,6 @@ Parameters:
 - int n: The integer to convert.
 </pre>
 
-<a name="Char Conversion"></a>
 ### Char Conversion
 
 - ft_tolower
@@ -296,7 +288,6 @@ Parameters:
 - int i: The character to convert.
 </pre>
 
-<a name="Linked Lists"></a>
 ### Linked Lists
 
 - ft_lstnew
@@ -359,7 +350,6 @@ Parameters:
 - void *(*f)(void *): The function to apply.
 - void (*del)(void *): The function to delete the content of each node.
 </pre>
-
 
 ### Printing
 
