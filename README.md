@@ -333,4 +333,40 @@ Parameters:
 
 ### Printing
 
--
+- ft_putchar_fd
+<pre>Description: Writes a character to a given file descriptor.
+Parameters:
+- char c: The character to write.
+- int fd: The file descriptor.
+</pre>
+
+- ft_putstr_fd
+<pre>Description: Writes a string to a given file descriptor.
+Parameters:
+- char *s: The string to write.
+- int fd: The file descriptor.
+</pre>
+
+- ft_putendl_fd
+<pre>Description: Writes a string followed by a newline to a given file descriptor.
+Parameters:
+- char *s: The string to write.
+- int fd: The file descriptor.
+</pre>
+
+- ft_putnbr_fd
+<pre>Description: Writes an integer to a given file descriptor.
+Parameters:
+- int n: The integer to write.
+- int fd: The file descriptor.
+</pre>
+
+- ft_putnbr
+<pre>Description: Writes an integer to the standard output.
+Parameters:
+- int n: The integer to write.
+</pre>
+
+### Additional Functions(upcoming projects)
+
+- 
