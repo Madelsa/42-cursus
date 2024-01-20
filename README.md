@@ -65,8 +65,6 @@ Compile your program using:
 gcc my_program.c libft.a
 ```
 
-## Getting Started
-
 ## Functions
 
 ### String Manipulation
