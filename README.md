@@ -1,12 +1,12 @@
 # Libft - Your Custom C Library
 ## Table of Contents
 
-- [Introduction](#Introduction)
-- Getting Started
+- [Introduction](#introduction)
+- [Getting Started](#getting-started)
   - Prerequisites
   - Installation
 - Usage
-- [Functions](Functions)
+- [Functions](#functions)
   - String Manipulation
   - Memory Management
   - Character Classification
@@ -62,8 +62,10 @@ Compile your program using:
 ```bash
 gcc my_program.c libft.a
 ```
-<a name="Functions"></a>
-## Functions
+<a name="getting-started"></a>
+## Getting Started
+
+##Functions
 
 ### String Manipulation
 
