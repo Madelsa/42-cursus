@@ -14,7 +14,7 @@
   - [Char Conversion](#char-conversion)
   - [Linked Lists](#linked-lists)
   - [Printing](#Printing)
-  - [Additional Functions](#additional-functions)
+  - [Additional Functions (upcoming projects)](#additional-functions)
 
 <a name="Introduction"></a>
 ## Introduction
@@ -400,7 +400,6 @@ Parameters:
 - int n: The integer to write.
 </pre>
 
-<a name="Additional Functions"></a>
 ### Additional Functions (upcoming projects)
 
 - ft_printf
