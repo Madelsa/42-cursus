@@ -67,11 +67,11 @@ gcc my_program.c libft.a
 ### String Manipulation
 
 - ft_strchr
-
-    Description: Locates the first occurrence of a character in a string.<br>
-    Parameters:
-    - const char *str: The string to search.
-    - int c: The character to search for.<br><br>
+<pre>Description: Locates the first occurrence of a character in a string.
+Parameters:
+- const char *str: The string to search.
+- int c: The character to search for.
+</pre>
 
 - ft_strdup
 
