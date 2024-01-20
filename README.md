@@ -1,12 +1,12 @@
 # Libft - Your Custom C Library
 ## Table of Contents
 
-- Introduction
+- [Introduction](#Introduction)
 - Getting Started
   - Prerequisites
   - Installation
 - Usage
-- Functions
+- [Functions](Functions)
   - String Manipulation
   - Memory Management
   - Character Classification
@@ -14,6 +14,7 @@
   - Linked Lists
   - Additional Functions
 
+<a name="Introduction"></a>
 ## Introduction
 
 Libft is a custom C library developed as part of the 42 curriculum. It contains a collection of functions that are commonly used in C programming, providing an essential set of tools for future projects. The library is designed to be robust, efficient, and to follow the 42 coding standards.
@@ -61,7 +62,7 @@ Compile your program using:
 ```bash
 gcc my_program.c libft.a
 ```
-
+<a name="Functions"></a>
 ## Functions
 
 ### String Manipulation
