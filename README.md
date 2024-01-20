@@ -69,13 +69,10 @@ Compile your program using:
 gcc my_program.c libft.a
 ```
 
-<a name="getting-started"></a>
 ## Getting Started
 
-<a name="Functions"></a>
 ## Functions
 
-<a name="String Manipulation"></a>
 ### String Manipulation
 
 - ft_strchr
