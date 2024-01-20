@@ -210,4 +210,127 @@ Parameters:
   
 ### Character Classification
 
+-ft_isalnum
+<pre>Description: Checks if the given character is alphanumeric.
+Parameters:
+- int x: The character to check.
+</pre>
+
+- ft_isalpha
+<pre>Description: Checks if the given character is an alphabetic character.
+Parameters:
+- int x: The character to check.
+</pre>
+
+- ft_isascii
+<pre>Description: Checks if the given character is an ASCII character.
+Parameters:
+- int x: The character to check.
+</pre>
+
+- ft_isdigit
+<pre>Description: Checks if the given character is a digit.
+Parameters:
+- int x: The character to check.
+</pre>
+
+- ft_isprint
+<pre>Description: Checks if the given character is a printable character.
+Parameters:
+- int x: The character to check.
+</pre>
+
+### String Conversion
+
+- ft_atoi
+<pre>Description: Converts a string to an integer.
+Parameters:
+- const char *str: The string to convert to an integer.
+</pre>
+
+- ft_itoa
+<pre>Description: Converts an integer to a string.
+Parameters:
+- int n: The integer to convert.
+</pre>
+
+### Char Conversion
+
+- ft_tolower
+<pre>Description: Converts an uppercase letter to lowercase.
+Parameters:
+- int i: The character to convert.
+</pre>
+
+- ft_toupper
+<pre>Description: Converts a lowercase letter to uppercase.
+Parameters:
+- int i: The character to convert.
+</pre>
+
+### Linked Lists
+
+- ft_lstnew
+<pre>Description: Creates a new linked list node.
+Parameters:
+- void *content: The content of the node.
+</pre>
+
+- ft_lstadd_front
+<pre>Description: Adds a new node to the beginning of a linked list.
+Parameters:
+- t_list **lst: A pointer to the pointer to the list.
+- t_list *new_node: The new node to add.
+</pre>
+
+- ft_lstsize
+<pre>Description: Returns the number of elements in a linked list.
+Parameters:
+- t_list *lst: The linked list.
+</pre>
+
+- ft_lstlast
+<pre>Description: Returns the last element of a linked list.
+Parameters:
+- t_list *lst: The linked list.
+</pre>
+
+- ft_lstadd_back
+<pre>Description: Adds a new node to the end of a linked list.
+Parameters:
+- t_list **lst: A pointer to the pointer to the list.
+- t_list *new_node: The new node to add.
+</pre>
+
+- ft_lstdelone
+<pre>Description: Deletes a node in a linked list.
+Parameters:
+- t_list *lst: The node to delete.
+- void (*del)(void *): The function to delete the content of the node.
+</pre>
+
+- ft_lstclear
+<pre>Description: Deletes an entire linked list.
+Parameters:
+- t_list **lst: A pointer to the pointer to the list.
+- void (*del)(void *): The function to delete the content of each node.
+</pre>
+
+- ft_lstiter
+<pre>Description: Iterates over a linked list and applies a function to each node.
+Parameters:
+- t_list *lst: The linked list.
+- void (*f)(void *): The function to apply.
+</pre>
+
+- ft_lstmap
+<pre>Description: Creates a new linked list by applying a function to each node.
+Parameters:
+- t_list *lst: The linked list.
+- void *(*f)(void *): The function to apply.
+- void (*del)(void *): The function to delete the content of each node.
+</pre>
+
+### Printing
+
 -
