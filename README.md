@@ -1,4 +1,4 @@
-# Libft - Your Custom C Library
+# Libft - A Custom C Library
 ## Table of Contents
 
 - [Introduction](#introduction)
