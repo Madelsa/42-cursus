@@ -367,6 +367,53 @@ Parameters:
 - int n: The integer to write.
 </pre>
 
-### Additional Functions(upcoming projects)
+### Additional Functions (upcoming projects)
 
-- 
+- ft_printf
+<pre>Description: A formatted output function similar to the standard printf.
+Parameters:
+- const char *str: The format string.
+- ...: Variable number of arguments.
+</pre>
+
+- ft_put_char
+<pre>Description: Writes a character to the standard output.
+Parameters:
+- int c: The character to write.
+</pre>
+
+- ft_put_string
+<pre>Description: Writes a string to the standard output.
+Parameters:
+- char *str: The string to write.
+</pre>
+
+- ft_put_hex_pointer
+<pre>Description: Writes a pointer value in hexadecimal format to the standard output.
+Parameters:
+- size_t ptr: The pointer value.
+</pre>
+
+- ft_putnbr_unsigned
+<pre>Description: Writes an unsigned integer to the standard output.
+Parameters:
+- unsigned int n: The unsigned integer to write.
+</pre>
+
+- ft_put_hex_uint_lower
+<pre>Description: Writes an unsigned integer in lowercase hexadecimal format to the standard output.
+Parameters:
+- unsigned int i: The unsigned integer to write.
+</pre>
+
+- ft_put_hex_uint_upper
+<pre>Description: Writes an unsigned integer in uppercase hexadecimal format to the standard output.
+Parameters:
+- unsigned int i: The unsigned integer to write.
+</pre>
+
+- get_next_line
+<pre>Description: Reads a line from a file descriptor.
+Parameters:
+- int fd: The file descriptor.
+</pre>
