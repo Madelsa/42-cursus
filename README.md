@@ -124,6 +124,14 @@ Parameters:
 - int c: The character to search for.
 </pre>
 
+- ft_substr
+<pre>Description: Extracts a substring from a string.
+Parameters:
+- char const *s: The string.
+- unsigned int start: The start index of the substring.
+- size_t len: The length of the substring.
+</pre>
+
 - ft_strjoin
 <pre>Description: Concatenates two strings.
 Parameters:
@@ -136,6 +144,13 @@ Parameters:
 Parameters:
 - char const *s1: The string.
 - char const *set: The set of characters to trim.
+</pre>
+
+- ft_split
+<pre>Description: Splits a string into an array of substrings based on a delimiter.
+Parameters:
+- char const *str: The string to split.
+- char c: The delimiter.
 </pre>
 
 - ft_strmapi
