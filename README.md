@@ -74,140 +74,140 @@ Parameters:
 </pre>
 
 - ft_strdup
-
-    Description: Duplicates a string.<br>
-    Parameters:
-    - const char *str: The string to duplicate.<br><br>
+<pre>Description: Duplicates a string.
+Parameters:
+- const char *str: The string to duplicate.
+</pre>
 
 - ft_strlcat
-
-    Description: Concatenates two strings with size control.<br>
-    Parameters:
-    - char *dest: Destination string.
-    - const char *src: Source string.
-    - size_t size: Size of the destination buffer.<br><br>
+<pre>Description: Concatenates two strings with size control.
+Parameters:
+- char *dest: Destination string.
+- const char *src: Source string.
+- size_t size: Size of the destination buffer.
+</pre>
 
 - ft_strlcpy
-
-    Description: Copies a string with size control.<br>
-    Parameters:
-    - char *dest: Destination string.
-    - const char *src: Source string.
-    - size_t size: Size of the destination buffer.<br><br>
+<pre>Description: Copies a string with size control.
+Parameters:
+- char *dest: Destination string.
+- const char *src: Source string.
+- size_t size: Size of the destination buffer.
+</pre>
 
 - ft_strlen
-
-    Description: Computes the length of a string.<br>
-    Parameters:
-    - const char *str: The string.<br><br>
+<pre>Description: Computes the length of a string.
+Parameters:
+- const char *str: The string.
+</pre>
 
 - ft_strncmp
-
-    Description: Compares two strings up to a specified number of characters.<br>
-    Parameters:
-    - const char *s1: The first string.
-    - const char *s2: The second string.
-    - size_t n: Number of characters to compare.<br><br>
+<pre>Description: Compares two strings up to a specified number of characters.
+Parameters:
+- const char *s1: The first string.
+- const char *s2: The second string.
+- size_t n: Number of characters to compare.
+</pre>
 
 - ft_strnstr
-
-    Description: Locates a substring in a string with size control.<br>
-    Parameters:
-    - const char *str: The string to search.
-    - const char *to_find: The substring to find.
-    - size_t len: Maximum number of characters to search.<br><br>
+<pre>Description: Locates a substring in a string with size control.
+Parameters:
+- const char *str: The string to search.
+- const char *to_find: The substring to find.
+- size_t len: Maximum number of characters to search.
+</pre>
 
 - ft_strrchr
-
-    Description: Locates the last occurrence of a character in a string.<br>
-    Parameters:
-    - const char *s: The string to search.
-    - int c: The character to search for.<br><br>
+<pre>Description: Locates the last occurrence of a character in a string.
+Parameters:
+- const char *s: The string to search.
+- int c: The character to search for.
+</pre>
 
 - ft_strjoin
-
-    Description: Concatenates two strings.<br>
-    Parameters:
-    - char const *s1: The first string.
-    - char const *s2: The second string.<br><br>
+<pre>Description: Concatenates two strings.
+Parameters:
+- char const *s1: The first string.
+- char const *s2: The second string.
+</pre>
 
 - ft_strtrim
-
-    Description: Trims leading and trailing characters from a string.<br>
-    Parameters:
-    - char const *s1: The string.
-    - char const *set: The set of characters to trim.<br><br>
+<pre>Description: Trims leading and trailing characters from a string.
+Parameters:
+- char const *s1: The string.
+- char const *set: The set of characters to trim.
+</pre>
 
 - ft_strmapi
-
-    Description: Applies a function to each character of a string.<br>
-    Parameters:
-    - char const *s: The string.
-    - char (*f)(unsigned int, char): The function to apply.<br><br>
+<pre>Description: Applies a function to each character of a string.
+Parameters:
+- char const *s: The string.
+- char (*f)(unsigned int, char): The function to apply.
+</pre>
 
 - ft_striteri
-
-    Description: Applies a function to each character of a string with its index.<br>
-    Parameters:
-    - char *s: The string.
-    - void (*f)(unsigned int, char *): The function to apply.<br><br>
+<pre>Description: Applies a function to each character of a string with its index.
+Parameters:
+- char *s: The string.
+- void (*f)(unsigned int, char *): The function to apply.
+</pre>
 
 ### Memory Management
 
 - ft_bzero
-
-    Description: Sets the first len bytes of the memory area pointed to by str to zero.<br>
-    Parameters:
-    - void *str: Pointer to the memory area.
-    - size_t len: Number of bytes to set to zero.<br><br>
+<pre>Description: Sets the first len bytes of the memory area pointed to by str to zero.
+Parameters:
+- void *str: Pointer to the memory area.
+- size_t len: Number of bytes to set to zero.
+</pre>
 
 - ft_calloc
-
-    Description: Allocates memory for an array of count elements, each of size bytes, and initializes them to zero.<br>
-    Parameters:
-    - size_t count: Number of elements.
-    - size_t size: Size of each element.<br><br>
+<pre>Description: Allocates memory for an array of count elements, each of size bytes, and initializes them to zero.
+Parameters:
+- size_t count: Number of elements.
+- size_t size: Size of each element.
+</pre>
 
 - ft_memchr
-
-    Description: Locates the first occurrence of a character in a block of memory.<br>
-    Parameters:
-    - const void *str: Pointer to the memory area.
-    - int c: The character to search for.
-    - size_t n: Number of bytes to search.<br><br>
+<pre>Description: Locates the first occurrence of a character in a block of memory.
+Parameters:
+- const void *str: Pointer to the memory area.
+- int c: The character to search for.
+- size_t n: Number of bytes to search.
+</pre>
 
 - ft_memcmp
-
-    Description: Compares two blocks of memory.<br>
-    Parameters:
-    - const void *str1: Pointer to the first memory area.
-    - const void *str2: Pointer to the second memory area.
-    - size_t n: Number of bytes to compare.<br><br>
-
+<pre>Description: Compares two blocks of memory.
+Parameters:
+- const void *str1: Pointer to the first memory area.
+- const void *str2: Pointer to the second memory area.
+- size_t n: Number of bytes to compare.
+</pre>
+  
 - ft_memcpy
-
-    Description: Copies a block of memory.<br>
-    Parameters:
-    - void *dest: Destination memory.
-    - const void *src: Source memory.
-    - size_t numBytes: Number of bytes to copy.<br><br>
+<pre>Description: Copies a block of memory.
+Parameters:
+- void *dest: Destination memory.
+- const void *src: Source memory.
+- size_t numBytes: Number of bytes to copy.
+</pre>
 
 - ft_memmove
-
-    Description: Copies a block of memory, handling overlapping regions.<br>
-    Parameters:
-    - void *dest: Destination memory.
-    - const void *src: Source memory.
-    - size_t numBytes: Number of bytes to copy.<br><br>
+<pre>Description: Copies a block of memory, handling overlapping regions.
+Parameters:
+- void *dest: Destination memory.
+- const void *src: Source memory.
+- size_t numBytes: Number of bytes to copy.
+</pre>
 
 - ft_memset
-
-    Description: Fills a block of memory with a specified value.<br>
-    Parameters:
-    - void *str: Pointer to the memory area.
-    - int value: Value to set.
-    - size_t len: Number of bytes to set.<br><br>
-
+<pre>Description: Fills a block of memory with a specified value.
+Parameters:
+- void *str: Pointer to the memory area.
+- int value: Value to set.
+- size_t len: Number of bytes to set.
+</pre>
+  
 ### Character Classification
 
 -
