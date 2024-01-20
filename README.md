@@ -11,7 +11,9 @@
   - [Memory Management](#memory-management)
   - [Character Classification](#character-classification)
   - [String Conversion](#string-conversion)
+  - [Char Conversion](#char-conversion)
   - [Linked Lists](#linked-lists)
+  - [Printing](#Printing)
   - [Additional Functions](#additional-functions)
 
 <a name="Introduction"></a>
@@ -361,7 +363,7 @@ Parameters:
 - void (*del)(void *): The function to delete the content of each node.
 </pre>
 
-<a name="Printing"></a>
+
 ### Printing
 
 - ft_putchar_fd
