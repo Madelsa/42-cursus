@@ -1,7 +1,7 @@
 # Libft - A Custom C Library
 ## Table of Contents
 
-- [Introduction](#introduction)
+- [Description](#description)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -17,7 +17,7 @@
   - [Additional Functions (upcoming projects)](#additional-functions-upcoming-projects)
 
 
-## Introduction
+## Description
 
 Libft is a custom C library developed as part of the 42 curriculum. It contains a collection of functions that are commonly used in C programming, providing an essential set of tools for future projects. The library is designed to be robust, efficient, and to follow the 42 coding standards.
 
