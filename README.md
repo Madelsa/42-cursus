@@ -19,13 +19,13 @@
 
 ## Description
 
-Libft is a custom C library developed as part of the 42 curriculum. It contains a collection of functions that are commonly used in C programming, providing an essential set of tools for future projects. The library is designed to be robust, efficient, and to follow the 42 coding standards.
+`Libft` is a custom C library developed as part of the 42 curriculum. It contains a collection of functions that are commonly used in C programming, providing an essential set of tools for future projects. The library is designed to be robust, efficient, and to follow the 42 coding standards.
 
 ## Getting Started
 
 ### Prerequisites
 
-To use the Libft library, you need:
+To use the `Libft` library, you need:
 
     1) A C compiler (e.g., GCC)
     2) Make
@@ -46,11 +46,11 @@ cd libft
 ```bash
 make
 ```
-This will generate the '<b>libft.a</b>' library file.
+This will generate the `libft.a` library file.
 
 ### Usage
 
-To use the library in your C project, include the '<b>libft.h</b>' header file and link against the '<b>libft.a</b>' library as shown below:
+To use the library in your C project, include the `libft.h` header file and link against the `libft.a` library as shown below:
 ```c
 #include "libft.h"
 
